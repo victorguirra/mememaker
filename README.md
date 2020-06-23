@@ -46,5 +46,21 @@ Após preencher os campos, o usuário clicará no botão e o meme lhe será gera
 </h3>
 
 ```bash
+    $ git clone https://github.com/victorguirra/Meme-Maker.git
+```
 
+<h3>
+    Entrando no repositório:
+</h3>
+
+```bash
+    $ cd Meme-Maker
+```
+
+<h3>
+Abra-o em sua IDE (no meu caso o VS CODE)
+</h3>
+
+```bash
+    $ code .
 ```
