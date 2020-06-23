@@ -6,7 +6,8 @@ import {Wrapper, Card, Templates, Form, Button} from './styles.js';
 
 export default function Home(){
     const [templates, setTemplates] = useState([]);
-    const [selectedTemplate, setSelectedTemplate] = useState(null)
+    const [selectedTemplate, setSelectedTemplate] = useState(null);
+    const [boxes, setBoxes] = useState([]);
 
     useEffect(() => {
         (async () => {
@@ -15,6 +16,23 @@ export default function Home(){
             setTemplates(memes);
         })();
     }, [])
+
+    const handleInputChange = (index) => (e) => {
+        const newValues = boxes;
+        newValues[index] = e.target.value;
+        setBoxes(newValues);
+    };
+
+    function handleSelectTemplate(template){
+        setSelectedTemplate(template);
+        setBoxes([]);
+    }
+
+    function handleSubmit(e){
+        e.preventDefault();
+
+        console.log(boxes)
+    }
 
     return(
         <Wrapper>
@@ -31,8 +49,8 @@ export default function Home(){
                         <button 
                         key={template.id}
                         type="button"
-                        onClick={() => setSelectedTemplate(template)}
-                        className={template.id === selectedTemplate?.id && 'selected'}
+                        onClick={() => handleSelectTemplate(template)}
+                        className={template.id === selectedTemplate ?.id ? 'selected' : ''}
                         >
 
                             <img src={template.url} alt={template.name} />
@@ -42,17 +60,27 @@ export default function Home(){
 
                 </Templates>
 
-                <h2>Textos</h2>
+                {selectedTemplate && (
+                    <>
 
-                <Form>
+                        <h2>Textos</h2>
 
-                    <input  placeholder="Texto #1"/>
-                    <input  placeholder="Texto #1"/>
-                    <input  placeholder="Texto #1"/>
+                        <Form onSubmit={handleSubmit}>
 
-                    <Button type="submit">MakeMyMeme</Button>
+                            {(new Array(selectedTemplate.box_count)).fill('').map((_, index) => (
+                                <input
+                                key={String(Math.random())}
+                                placeholder={`Texto #${index + 1}`}
+                                onChange={handleInputChange(index)} 
+                                />
+                            ))}
 
-                </Form>
+                            <Button type="submit">MakeMyMeme</Button>
+
+                        </Form>
+
+                    </>
+                )}
 
             </Card>
 
