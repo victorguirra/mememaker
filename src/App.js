@@ -1,13 +1,17 @@
 import React from 'react';
 
+import GlobalStyles from './styles/global.js'
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      
-        <p>Esse aqui será meu app</p>
-    
-    </div>
+   <>
+
+      <GlobalStyles />
+
+      <Home />
+
+   </>
   );
 }
 
