@@ -64,3 +64,9 @@ Abra-o em sua IDE (no meu caso o VS CODE)
 ```bash
     $ code .
 ```
+
+---
+
+<h3 align="center">
+    💻 Desenvolvido por: Victor Guirra
+</h3>
