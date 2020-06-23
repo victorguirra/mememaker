@@ -64,12 +64,18 @@ export const Button = styled.button`
     height:40px;
     border-radius:8px;
     border:0;
-    background-color:#3495D8;
+    background-color:#4395D8;
     color:#fff;
     font-weight:bold;
     font-size:14px;
+    border: 2px solid transparent;
+
+    &:selected:{
+        border-color: #4395D8;
+    }
 
     &:hover{
         background:#3672a3;
     }
 `;
+
