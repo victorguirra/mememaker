@@ -27,7 +27,7 @@ export const Card = styled.div`
 
 export const Templates = styled.div`
     width:100%;
-    height:90px;
+    height:92px;
     background-color:#EEE;
     border-radius:8px;
     overflow-y: auto;
