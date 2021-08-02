@@ -9,6 +9,7 @@ export const Container = styled.div`
     justify-content:center;
 
     img {
+        max-width:100%;
         margin-bottom:16px;
     }
 `;
