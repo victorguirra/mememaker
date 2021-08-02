@@ -6,6 +6,7 @@ import { useMeme } from '../../contexts/memeContext';
 
 import Card from '../../components/Card';
 import Button from '../../components/Button';
+import Modal from '../../components/Modal';
 
 export default function Result() {
     const { generatedMeme } = useMeme();
@@ -22,6 +23,12 @@ export default function Result() {
 
                 <NewMemeButton to="/">Gerar outro meme</NewMemeButton>
                 <Button onClick={ handleDownload }>Fazer Download</Button>
+
+                <Modal>
+                    <h2>Digite o nome do arquivo</h2>
+                    <input type="text" />
+                    <Button>Fazer download</Button>
+                </Modal>
             </Card>
         </Container>
     )
