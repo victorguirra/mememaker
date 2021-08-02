@@ -59,7 +59,9 @@ export default function Home(){
             <Card>
                 {generatedMeme &&(
                     <>
-                        <img src={generatedMeme} alt="Generated Meme" />
+                        <img src={generatedMeme} alt="Generated Meme" className="generated-image"/>
+
+                        <Button>Fazer Download</Button>
 
                         <Button
                             type="submit"

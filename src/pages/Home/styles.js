@@ -23,6 +23,10 @@ export const Card = styled.div`
         margin-bottom:10px;
     }
 
+    .generated-image {
+        max-width:100%;
+    }
+
 `;
 
 export const Templates = styled.div`
@@ -45,8 +49,6 @@ export const Templates = styled.div`
             border-color:#4395D8;
         }
         
-       
-
         img{
             width:53px;
             height:53px;
