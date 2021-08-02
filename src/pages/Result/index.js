@@ -60,6 +60,7 @@ export default function Result() {
                             <input
                                 type="text"
                                 onChange={ event => setFileName(event.target.value)}
+                                placeholder="Nome do arquivo"
                             />
                             <Button type="submit">Fazer download</Button>
                         </form>
