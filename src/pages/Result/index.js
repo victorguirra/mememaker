@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FileSaver from 'file-saver'
 import { Container, NewMemeButton } from './styles';
 
@@ -7,10 +7,15 @@ import { useMeme } from '../../contexts/memeContext';
 import Card from '../../components/Card';
 import Button from '../../components/Button';
 import Modal from '../../components/Modal';
+import Toast from '../../components/Toast';
 
 export default function Result() {
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
     const [ fileName, setFileName ] = useState('');
+    const [ toastData, setToastData ] = useState({
+        isOpen: false,
+        message: ''
+    })
 
     const { generatedMeme } = useMeme();
 
@@ -18,13 +23,24 @@ export default function Result() {
         event.preventDefault();
 
         if(!fileName) {
-            alert('O nome é obrigatório!');
+            setToastData({
+                isOpen: true,
+                message: 'O Nome do arquivo é obrigatório!' 
+            })
             return;
         }
 
         FileSaver.saveAs(generatedMeme, fileName);
         setModalIsOpen(false);
     }
+
+    useEffect(() => {
+        if(toastData.isOpen){
+            setTimeout(() => {
+                setToastData({ isOpen: false, message: ''});
+            }, 3000);
+        }
+    }, [toastData])
 
     return(
         <Container>
@@ -36,6 +52,8 @@ export default function Result() {
 
                 { modalIsOpen && (
                     <Modal>
+                        { toastData.isOpen && <Toast message={ toastData.message } /> }
+
                         <h2>Digite o nome do arquivo</h2>
                         
                         <form onSubmit={ handleDownload }>
