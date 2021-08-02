@@ -12,13 +12,29 @@ export const Wrapper = styled.div`
 export const Templates = styled.div`
     width:100%;
     height:90px;
+
     background-color:#EEE;
     border-radius:8px;
+    
     overflow-y: auto;
+    padding:0 15px;
+    
     display:flex;
     align-items:center;
-    padding:0 15px;
     margin-bottom:30px;
+
+    ::-webkit-scrollbar{
+        width:20px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        width:20px;
+        background-color:#4395D8;
+        border-radius:10px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color:#DBDBDB;
+    }
 
     button{
         background:transparent;
