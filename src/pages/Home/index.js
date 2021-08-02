@@ -19,12 +19,14 @@ export default function Home(){
     const { setGeneratedMeme } = useMeme();
 
     useEffect(() => {
+        setGeneratedMeme('');
+
         (async () => {
             const resp = await fetch('https://api.imgflip.com/get_memes');
             const {data : {memes}} = await resp.json();
             setTemplates(memes);
         })();
-    }, [])
+    }, [setGeneratedMeme])
 
     const handleInputChange = (index) => (e) => {
         const newValues = boxes;
@@ -53,12 +55,6 @@ export default function Home(){
         setGeneratedMeme(url);
         history.push('/result');
     }
-
-    // function handleReset(){
-    //     setSelectedTemplate(null);
-    //     setBoxes([]);
-    //     setGeneratedMeme(null);
-    // }
 
     return(
         <Wrapper>
