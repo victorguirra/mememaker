@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
-
+import React, { useState, useEffect } from 'react';
 import qs from 'qs';
 
-import logo from '../../images/logo.svg'
-
 import {Wrapper, Card, Templates, Form, Button} from './styles.js';
+
+import logo from '../../images/logo.svg'
 
 export default function Home(){
     const [templates, setTemplates] = useState([]);
@@ -55,27 +54,27 @@ export default function Home(){
 
     return(
         <Wrapper>
-
             <img src={logo} alt="Logo MemeMaker" />
 
             <Card>
-                
                 {generatedMeme &&(
                     <>
-
                         <img src={generatedMeme} alt="Generated Meme" />
 
-                        <Button type="submit" onClick={handleReset}>Criar outro meme</Button>
-
+                        <Button
+                            type="submit"
+                            onClick={ handleReset }
+                        >
+                            Criar outro meme
+                        </Button>
                     </>
                 )}
+
                 {!generatedMeme &&(
                     <>
-
                         <h2>Selecione um template</h2>
 
                         <Templates>
-
                             {templates.map((template) => (
                                 <button 
                                 key={template.id}
@@ -83,21 +82,16 @@ export default function Home(){
                                 onClick={() => handleSelectTemplate(template)}
                                 className={template.id === selectedTemplate ?.id ? 'selected' : ''}
                                 >
-
                                     <img src={template.url} alt={template.name} />
-
                                 </button>
                             ))}
-
                         </Templates>
 
                         {selectedTemplate && (
                             <>
-
                                 <h2>Textos</h2>
 
-                                <Form onSubmit={handleSubmit}>
-
+                                <Form onSubmit={ handleSubmit }>
                                     {(new Array(selectedTemplate.box_count)).fill('').map((_, index) => (
                                         <input
                                         key={String(Math.random())}
@@ -105,19 +99,13 @@ export default function Home(){
                                         onChange={handleInputChange(index)} 
                                         />
                                     ))}
-
                                     <Button type="submit">MakeMyMeme</Button>
-
                                 </Form>
-
                             </>
                         )}
-
                     </>
                 )}  
-
             </Card>
-
         </Wrapper>
     )
 }
