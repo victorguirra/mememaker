@@ -9,26 +9,6 @@ export const Wrapper = styled.div`
     flex-direction:column;
 `;
 
-export const Card = styled.div`
-    background-color:#fff;
-    width:550px;
-    border-radius:8px;
-    padding:20px;
-    margin-top:15px;
-    box-shadow: 0 6px 10px 0 #000;
-
-    h2{
-        font-size:22px;
-        color:#392D2D;
-        margin-bottom:10px;
-    }
-
-    .generated-image {
-        max-width:100%;
-    }
-
-`;
-
 export const Templates = styled.div`
     width:100%;
     height:90px;
@@ -67,19 +47,3 @@ export const Form = styled.form`
         margin-bottom:10px;
     }
 `;
-
-export const Button = styled.button`
-    width:100%;
-    height:40px;
-    border-radius:8px;
-    border:0;
-    background-color:#4395D8;
-    color:#fff;
-    font-weight:bold;
-    font-size:14px;
-    
-    &:hover{
-        background:#3672a3;
-    }
-`;
-
