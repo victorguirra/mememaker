@@ -22,6 +22,7 @@ const barTransition = keyframes`
 
 export const Container = styled.div`
     width:24rem;
+    max-width:75%;
     height:3.6rem;
     
     padding:0 1rem;
