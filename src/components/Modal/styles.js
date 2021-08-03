@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Overlay = styled.div`
     width: 100%;
-	height: 100%;
+	height: 100vh;
 
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(5px);
