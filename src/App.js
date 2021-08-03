@@ -1,17 +1,16 @@
 import React from 'react';
 
+import { MemeProvider } from './contexts/memeContext';
+
 import GlobalStyles from './styles/global.js'
-import Home from './pages/Home';
+import Routes from './routes';
 
 function App() {
   return (
-   <>
-
+   <MemeProvider>
       <GlobalStyles />
-
-      <Home />
-
-   </>
+      <Routes />
+   </MemeProvider>
   );
 }
 
