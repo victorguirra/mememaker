@@ -17,7 +17,7 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 100%;
+    width: 90%;
 	max-width: 450px;
 	
     background: #FFF;
