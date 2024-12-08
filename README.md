@@ -2,6 +2,13 @@
     <img src="https://ik.imagekit.io/ur6xo9m70i/logo_0Tnm9Crin.svg" />
 </h1>
 
+<p align="center">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/victorguirra/mememaker">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/victorguirra/mememaker">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/victorguirra/mememaker">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/victorguirra/mememaker">
+</p>
+
 ## 📔 Sobre
 
 Trata-se de um criador de memes. Nele, o usuário escolhe a imagem na qual ele deseja, digita os textos que quer utilizar no meme e o programa retorna o meme criado.
