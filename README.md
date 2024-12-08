@@ -4,11 +4,9 @@
 
 ## 📔 Sobre
 
-O MemeMaker trata-se de um projeto com a utilidade de criar memes.
+Trata-se de um criador de memes. Nele, o usuário escolhe a imagem na qual ele deseja, digita os textos que quer utilizar no meme e o programa retorna o meme criado.
 
 O programa se conecta com uma API que contém uma infinidade de imagens para a geração de memes.
-
-Nele, o usuário escolhe a imagem na qual ele deseja criar o meme, digita os textos que deseja utilizar no meme, o programa retorna para ele o meme criado.
 
 ## 🚀 Tecnologias e Componentes Utilizados
 
